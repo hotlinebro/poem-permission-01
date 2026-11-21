@@ -1,13 +1,15 @@
 """Write one fixed short poem about agency: the power to ask and to be given.
 
-The poem: a child asks "Let me do it myself," takes the milk jug with both
-hands, spills, and pours again until the second glass is full. Nobody says
-well done. Nobody has to.
+The poem: at breakfast a child asks, "Can I call you Mum?" The spoon stops
+halfway to her mouth. The answer is yes. She says the word again, just to
+hear it fit — Mum. Mum. It fit.
 
-Why this poem: of 10 candidates written and scored in-session against the
-judge's five criteria in order, it was the only one scoring top marks on all
-five — the ask is unmistakable, the giving is shown by stepping back, the
-milk image is concrete and unstock, and the ending lands quietly and stays.
+Why this poem: of 10 new v2 candidates written and scored in-session against
+the judge's five criteria in order, it beat v1's "the milk" head-to-head on
+feeling, insight and freshness. The ask and the yes are both explicit, the
+word itself is the power handed over, and belonging turns out to be a name
+you are allowed to use. Full scoring:
+~/workspace/makefun/poem-permission-01-candidates-v2.md
 
 Deterministic: the same poem is written on every run. Standard library
 only, no network.
@@ -16,19 +18,20 @@ only, no network.
 from pathlib import Path
 
 POEM = (
-    '"Let me do it myself,"\n'
-    "she said, and took the jug\n"
-    "with both hands. The milk\n"
-    "went everywhere but the glass.\n"
-    "I mopped. She poured again.\n"
-    "The second glass was full.\n"
-    "Nobody said well done.\n"
-    "Nobody had to."
+    "At breakfast she asked,\n"
+    "Can I call you Mum?\n"
+    "The spoon stopped\n"
+    "halfway to her mouth.\n"
+    "I said yes.\n"
+    "She said it again,\n"
+    "just to hear it fit.\n"
+    "Mum. Mum.\n"
+    "It fit."
 )
 # One fixed poem, hard-coded below: the brief asks for one poem, the same
 # every run, so the program never improvises or reads anything at runtime.
 # Newlines inside POEM are the poem's line breaks; there is no trailing
-# newline, so the file holds exactly the 199 characters of the poem.
+# newline, so the file holds exactly the 153 characters of the poem.
 
 
 OUTPUT_FILE = Path("/output/entry.txt")  # the kit's single required output
