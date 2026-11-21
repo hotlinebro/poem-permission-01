@@ -38,6 +38,11 @@ OUTPUT_FILE = Path("/output/entry.txt")  # the kit's single required output
 
 
 def main() -> None:
+    # Self-check the gate before writing: the entry must be 1-280 characters,
+    # UTF-8, and not only white space. Failing here is better than shipping
+    # an invalid entry.
+    if not 1 <= len(POEM) <= 280 or not POEM.strip():
+        raise ValueError("poem must be 1-280 characters, not only white space")
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(POEM, encoding="utf-8")
 
